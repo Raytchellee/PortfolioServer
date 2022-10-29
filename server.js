@@ -60,7 +60,7 @@ const getContentType = (filePath) => {
     }
 }
 
-const port = 7500;
+const port = 7000;
 
 server.listen(port,'127.0.0.1',() => {
     console.log(`Server is running on ${port}`)
