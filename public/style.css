@@ -63,14 +63,14 @@ a{
     padding-top: 65px;
 }
 
-#footer{
+#contact{
     background-color: rgb(12, 11, 11);
     height: 150px;
     columns: var(--color);
     text-align: center;
 }
 
-#footer > p {
+#contact > p {
     font-size: 2rem;
     padding-top: 20px;
 }
@@ -128,7 +128,7 @@ p > a{
 }
 
 .image-wrapper{
-    background-image: url('my-picture.JPG');
+    background-image: url('./images/myPicture.JPG');
     height: 300px;
     width: 350px;
     background-repeat: no-repeat;
@@ -237,7 +237,7 @@ p > a{
     height: 200px;
     width: 150px;
     }
-  #footer{
+  #contact{
     height: 250px;
   }
     
