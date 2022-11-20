@@ -3,11 +3,9 @@ const fs = require("fs");
 const path = require("path");
 
 const server = http.createServer((req, res) => {
-  let filePath = path.join(
-    __dirname,
-    "public",
-    req.url == "/" || req.url == "/home" ? "index.html" : req.url
-  );
+  let request = getReqUrl(req.url);
+
+  let filePath = path.join(__dirname, "public", request || req.url);
   //   console.log(filePath);
   let contentType = getContentType(filePath) || "index.html";
   let emptyPath = path.join(__dirname, "public", "404.html");
@@ -56,6 +54,19 @@ const getContentType = (filePath) => {
   }
   if (extname == ".JPG") {
     return "image/jpg";
+  }
+};
+
+const getReqUrl = (req) => {
+  console.log(req);
+  if (req == "/" || req == "/home") {
+    return "index.html";
+  }
+  if (req == "/contact") {
+    return "contact.html";
+  }
+  if (req == "/about") {
+    return "about.html";
   }
 };
 
