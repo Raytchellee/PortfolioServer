@@ -58,7 +58,6 @@ const getContentType = (filePath) => {
 };
 
 const getReqUrl = (req) => {
-  console.log(req);
   if (req == "/" || req == "/home") {
     return "index.html";
   }
