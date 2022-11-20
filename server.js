@@ -8,7 +8,7 @@ const server = http.createServer((req, res) => {
     "public",
     req.url == "/" || req.url == "/home" ? "index.html" : req.url
   );
-  console.log(filePath);
+  //   console.log(filePath);
   let contentType = getContentType(filePath) || "index.html";
   let emptyPath = path.join(__dirname, "public", "404.html");
   // fs.readFile(filePath,'utf8', (err,content) => {
@@ -30,7 +30,7 @@ const server = http.createServer((req, res) => {
       res.end(content);
     }
   });
-  console.log(req.url);
+  //   console.log(req.url);
 });
 
 const getContentType = (filePath) => {
@@ -46,19 +46,15 @@ const getContentType = (filePath) => {
     return "text/html";
   }
   if (extname == ".png") {
-    // console.log('pnggggggg');
     return "image/png";
   }
   if (extname == ".jpg") {
-    // console.log('jpggggggg');
     return "image/jpg";
   }
   if (extname == ".PNG") {
-    // console.log('Pnggggggg');
     return "image/png";
   }
   if (extname == ".JPG") {
-    // console.log('Jpggggggg');
     return "image/jpg";
   }
 };
