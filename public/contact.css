@@ -1,0 +1,74 @@
+body {
+  background-color: rgb(12, 11, 11);
+  color: #fff;
+  font-family: "Georgia", serif;
+  font-size: 16px;
+  font-weight: 250;
+  line-height: 1.4;
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  background-color: rgb(24, 19, 19);
+  box-shadow: 1px 1px 1px peru;
+  width: 250px;
+  padding: 20px;
+  border-radius: 10px;
+}
+#message {
+  /* background-color: rgb(12, 11, 11); */
+  border: none;
+  border-bottom: 1px solid peru;
+  height: 100px;
+}
+
+input {
+  background-color: rgb(12, 11, 11);
+}
+
+label,
+input {
+  display: block;
+  padding: 10px;
+  border-radius: 10px;
+  width: 200px;
+  color: peru;
+}
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#Submit {
+  background-color: #fd841f;
+  width: 100px;
+  color: white;
+  padding: 10px;
+  border: none;
+  margin-left: 30%;
+}
+#Submit:hover {
+  background-color: #b85f16;
+}
+
+#contact {
+  background-color: rgb(12, 11, 11);
+  height: 150px;
+  columns: var(--color);
+  text-align: center;
+}
+
+#contact > p {
+  font-size: 2rem;
+  padding-top: 20px;
+}
+p > a {
+  color: peru;
+}
