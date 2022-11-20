@@ -6,7 +6,7 @@ const server = http.createServer((req, res) => {
   let filePath = path.join(
     __dirname,
     "public",
-    req.url == "/" ? "index.html" : req.url
+    req.url == "/" || req.url == "/home" ? "index.html" : req.url
   );
   console.log(filePath);
   let contentType = getContentType(filePath) || "index.html";
